@@ -1,8 +1,11 @@
 import app from "./backend/app.js";
 import { connectDB } from "./backend/config/db.js";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 //start the server
-app.listen(3000, async (err) => {
+app.listen(process.env.PORT || 3000, async (err) => {
   if (err) {
     console.log(`server failed with error ${err}`);
   } else {
