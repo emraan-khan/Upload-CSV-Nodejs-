@@ -5,7 +5,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 //start the server
-app.listen(process.env.PORT || 3000, async (err) => {
+app.listen( 3000, async (err) => {
   if (err) {
     console.log(`server failed with error ${err}`);
   } else {
@@ -13,4 +13,4 @@ app.listen(process.env.PORT || 3000, async (err) => {
     await connectDB();
       console.log(`server is running at http://localhost:3000`);
   }
-});
+}); 

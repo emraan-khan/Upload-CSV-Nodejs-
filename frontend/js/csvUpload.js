@@ -89,7 +89,8 @@ async function deleteFile(fileId) {
 //send request to view a particular file, along with the file-id in req.query
 function viewFile(fileId) {
   const url = `view/?id=${fileId}`;
-  window.open(url);
+  // window.open(url);
+  window.location.href = url; // Open the URL in the same tab
   console.log(`Opening file with id: ${fileId}`);
 }
 
